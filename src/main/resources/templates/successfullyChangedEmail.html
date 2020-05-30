@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="/all.css">
+    <link type="text/css" rel="stylesheet" href="/login_signup.css">
+</head>
+<body>
+    <span class="phoneCase">
+        <span class="phoneContainer">
+            <div class="image">
+                <div id="requestPasswordToken">Please log in with your new email address.</div>
+                <form method="post" th:action="@{/login}">
+                    <div><input class="button" type="submit" value="Login"></div>
+                </form>
+            </div>
+        </span>
+    </span>
+</body>
+</html>

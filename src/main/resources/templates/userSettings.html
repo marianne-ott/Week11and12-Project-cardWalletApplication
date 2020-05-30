@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Settings</title>
+    <link type="text/css" rel="stylesheet" href="/inapp.css">
+    <link type="text/css" rel="stylesheet" href="/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<span class="phoneCase">
+<span class="phoneContainer">
+
+    <div id="header">
+         <img th:src="wallit_w_logo.png" class="wLogo">
+        <p class="headline">Settings</p>
+    </div>
+
+<div class="mainContainer" id="showCardContainer">
+
+        <a href="/change-email"><div class="settingsContainer">
+            <p class="headlineUserSettings">Change email</p>
+        </div></a>
+
+        <a href="/change-password"> <div class="settingsContainer">
+        <p class="headlineUserSettings">Change password</p>
+        </div> </a>
+
+    <a href="/terms-and-conditions"><div class="settingsContainer">
+        <p class="headlineUserSettings">Terms of Service</p>
+        </div></a>
+
+
+    <a href="/logout"><div method="post" class="settingsContainer">
+            <p class="headlineUserSettings">Log out</p>
+        </div></a>
+
+
+    <a href="/sureYouWantToDeleteAccount"><div class="settingsContainer">
+        <p class="headlineUserSettings">Delete account</p>
+        </div></a>
+
+
+    </div>
+    <div id="footer">
+            <a href="/add-gift-card" class="options"><span><i class="fa fa-plus"></i></span></a>
+            <a href="/my-cards" class="options"><span><i class="fa fa-credit-card"></i></span></a>
+               <span class="options" id="clickedView"><i class="fa fa-cog"></i></span>
+    </div>
+
+
+</span>
+    </span>
+
+
+</body>
+</html>

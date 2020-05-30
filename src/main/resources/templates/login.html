@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+    <link type="text/css" rel="stylesheet" href="/login_signup.css">
+    <link type="text/css" rel="stylesheet" href="/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<span class="phoneCase">
+<span class="phoneContainer">
+
+<div class="image">
+
+     <img th:src="wallit_navn_logo.png" class="wallitLogo">
+
+    <form autocomplete="off" method="post" th:action="@{/login}">
+        <h2>Login</h2>
+        <input class="input" type="text"  name="username"  placeholder="Email"/>
+        <input id="password" class="input" type="password"  name="password"  placeholder="Password"/>
+        <p id="showHide" style="background: Transparent no-repeat; outline: none; border: none">
+            <i id="eye" class="fa fa-eye"></i> Show password
+        </p>
+        <p id="invalidEmailOr" th:if="${#request.getParameter('error')}">Invalid email or password</p>
+        <input class="button" type="submit" value="Log in"/>
+    </form>
+    <div id="forgotPassword" ><a id="forgotPasswordLink" href="/forgot-password">Forgot password?</a></div>
+    <div id="signupLink">
+        <p>Don't have an account yet?</p>
+        <a th:href="'/sign-up'">Sign up</a>
+    </div>
+
+</div>
+
+    </span>
+    </span>
+</body>
+
+<script src="/script/ShowHide.js"></script>
+
+</html>

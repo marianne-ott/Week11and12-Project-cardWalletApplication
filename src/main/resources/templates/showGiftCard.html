@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>GiftCard</title>
+    <link type="text/css" rel="stylesheet" href="/inapp.css">
+    <link type="text/css" rel="stylesheet" href="/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<span class="phoneCase">
+<span class="phoneContainer">
+
+        <div id="header">
+         <img th:src="'/wallit_w_logo.png'" class="wLogo">
+        <p class="headline" th:text="${giftCard.storeName}"></p>
+    </div>
+
+<div class="mainContainer">
+    <!--<p class="storeName" th:text="${giftCard.storeName}"></p>-->
+
+            <div class="logoShowGiftCardContainer">
+                <img class="logoShowGiftCard" th:src="'/images/' + ${giftCard.storeName} + '.jpg'" alt="store logo" >
+            </div>
+
+                <p class="exp">Current Balance:</p>
+                <p class="balance" th:text="${giftCard.balanceInt} + ' NOK'"></p>
+
+                <img class="strekkode" src="/images/barcode.jpg" alt="store logo">
+
+                <p class="exp" th:text="'Exp: ' + ${#dates.format(giftCard.expiryDate, 'd.MM.yyyy')}"></p>
+
+<br>
+         <a th:href="'/edit-gift-card/' + ${appUserId} + '/' + ${giftCard.id}"><div class="inShowGiftCardButton">Edit Card</div></a>
+       <a th:href="'/delete-gift-card/' + ${appUserId} + '/' + ${giftCard.id}"> <div class="inShowGiftCardButton"> Delete Card</div></a>
+
+    </div>
+           <div id="footer">
+            <a href="/add-gift-card" class="options"><span><i class="fa fa-plus"></i></span></a>
+            <a href="/my-cards" class="options"><span><i class="fa fa-credit-card"></i></span></a>
+            <a href="/settings" class="options"><span><i class="fa fa-cog"></i></span></a>
+    </div>
+</span>
+    </span>
+
+</body>
+</html>

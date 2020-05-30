@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="/inapp.css">
+    <link type="text/css" rel="stylesheet" href="/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<span class="phoneCase">
+<span class="phoneContainer">
+
+    <div id="header">
+         <img th:src="wallit_w_logo.png" class="wLogo">
+        <p class="headline">My Cards</p>
+    </div>
+
+<div id="showCardContainer" class="mainContainer">
+
+    <div class="noGiftCards" th:if="${giftCardList.size()} == 0">
+        <div>You do not have any gift cards yet...</div>
+        <div>Add your first gift card now!</div>
+        <a href="/add-gift-card">
+            <button class="addCardButtonFromNoCards"><i class="fa fa-plus" style="color: black"></i></button></a>
+    </div>
+
+        <div th:if="${giftCardList.size() >= 1}" th:each="giftCard : ${giftCardList}">
+
+
+               <div th:if="${!giftCard.isExpired()}">
+
+                <div class="cardContainer">
+                <a th:href="'/show-gift-card/' + ${giftCard.appUserId} + '/' + ${giftCard.id}">
+                    <div class="logoContainer" th:fragment="logo">
+                        <img th:src="'/images/' + ${giftCard.storeName} + '.jpg'" alt="store logo" class="logoMyCards">
+                    </div>
+                    <div class="infoMyCardsContainer">
+                        <p th:text="${giftCard.storeName}" style="font-weight: bold"></p>
+                        <p th:text="'Balance: ' + ${giftCard.balanceInt} + ' NOK'"></p>
+                        <p th:text="'Exp: ' + ${#dates.format(giftCard.expiryDate, 'd.MM.yyyy')}"></p>
+                        <p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+            <div th:if="${giftCard.isExpired()}">
+                <div class="cardContainer" style="background-color: lightgrey;" >
+                <a th:href="'/show-gift-card/' + ${giftCard.appUserId} + '/' + ${giftCard.id}">
+                    <div class="logoContainer" th:fragment="logo">
+                        <img th:src="'/images/' + ${giftCard.storeName} + '.jpg'" alt="store logo" class="logoMyCards">
+                    </div>
+                    <div class="infoMyCardsContainer">
+                        <p th:text="${giftCard.storeName}" style="font-weight: bold"></p>
+                        <p th:text="'Balance: ' + ${giftCard.balanceInt} + ' NOK'"></p>
+                        <p>  <p style="color: orangered;" th:text="'Exp: ' + ${#dates.format(giftCard.expiryDate, 'd.MM.yyyy')}"> </p></p>
+                        <p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    <br>
+   </div>
+    </div>
+           <div id="footer">
+            <a href="/add-gift-card" class="options"><span><i class="fa fa-plus"></i></span></a>
+                <span class="options" id="clickedView"><i class="fa fa-credit-card"></i></span>
+            <a href="/settings" class="options"><span><i class="fa fa-cog"></i></span></a>
+    </div>
+    </div>
+</span>
+    </span>
+
+</body>
+</html>

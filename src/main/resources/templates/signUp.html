@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+    <link type="text/css" rel="stylesheet" href="/login_signup.css">
+    <link type="text/css" rel="stylesheet" href="/all.css">
+</head>
+<body>
+    <span class="phoneCase">
+        <span class="phoneContainer">
+        <div class="image">
+            <img th:src="wallit_navn_logo.png" class="wallitLogo">
+            <form action="/save-user" th:object="${appUser}" method="post">
+                <h2>Sign up</h2>
+                    <input type="text" th:field="*{email}" placeholder="Email"/>
+                        <p class="popup" th:if="${#fields.hasErrors('email')}">Please enter a valid email address.</p>
+                     <input type="password" th:field="*{password}" placeholder="Password"/>
+                        <p class="popup" th:if="${#fields.hasErrors('password')}">Please enter a password.</p>
+                    <input type="password" th:field="*{repeatPassword}" placeholder="Confirm password"/>
+                        <p class="popup" th:if="${#fields.hasErrors('repeatPassword')}">Passwords are not a match.</p>
+                    <p id="termsText"><input type="checkbox" id="terms"/>
+                        I hereby agree to the <a href="/terms-and-conditions" style="color: black">terms of service.</a>
+                    </p>
+                <div  class="popup" id="warningMessage"></div>
+                <input class="button" type="submit" value="Sign up"/>
+            </form>
+            <div id="loginLink">
+                <p>Already have an account?</p>
+                <a th:href="'/login'">Login</a>
+            </div>
+        </div>
+    </span>
+</span>
+</body>
+<script src="/script/TosWarning.js"></script>
+</html>

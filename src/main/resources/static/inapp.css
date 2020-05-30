@@ -1,0 +1,484 @@
+#header {
+    font-size: 1.5vw;
+    padding-top: 1.1vw;
+    background-color: #2A7680;
+    height: 3.5vw;
+    text-align: center;
+    color: white;
+    font-family: Trebuchet ms;
+}
+
+.mainContainer {
+    height: 31.5vw;
+    margin: 0 auto;
+    color: black;
+    font-size: 1vw;
+    overflow: scroll;
+    background-color: white;
+}
+
+#showCardContainer {
+    background-color: #F6F6F6 !important;
+}
+
+.mainContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.cardContainer {
+    background-color: white;
+    width: 18vw;
+    color: black;
+    font-size: 0.8vw;
+    align-items: start;
+    margin-left: 0.95vw;
+    margin-top: 1.1vw;
+    height: 8.7vw;
+    border: #FFCAA1 solid 0.1vw;
+    margin-bottom: -1.35vw;
+}
+
+.flexGiftCard {
+    display: flex;
+    margin: 10px;
+}
+
+.logoShowGiftCardContainer {
+    align-content: center;
+    margin-left: 7.4vw;
+    margin-right: 7.4vw;
+    margin-top: -1vw;
+}
+
+.storeName {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    margin-top: 2vw;
+}
+
+.balance {
+    font-size: 2.4vw;
+    color: black;
+    text-align: center;
+    margin-top: -0.5vw;
+    padding-bottom: 1.3vw;
+}
+
+.exp {
+    font-size: 15px;
+    color: black;
+    text-align: center;
+    margin-top: 0.4vw;
+}
+
+.logoShowGiftCard {
+    height: 4.5vw;
+    width: 4.5vw;
+    margin-top: 1.5vw;
+}
+
+.strekkode {
+    height: 9vw;
+    width: 19vw;
+    margin-left: 0.5vw;
+    margin-top: -3vw;
+}
+
+.logoContainer {
+    margin: 16px;
+    flex: 1 1 auto;
+}
+
+.logoMyCards {
+    height: 6vw;
+    width: 7vw;
+    border-style: solid;
+    border-color: white;
+    margin-right: 10vw;
+    margin-top: 0.5vw;
+}
+
+.infoMyCardsContainer {
+    flex: 1 1 auto;
+    padding-left: 9.5vw;
+    margin-top: -6.5vw;
+    text-align: left;
+}
+
+.editGiftCardButton {
+    border: 1px solid orangered;
+    font-family: sans-serif;
+    font-size: 0.8vw;
+    padding: 0.8vw 1.5vw;
+    display: inline-block;
+    width: 15vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 0.5vw;
+    text-align: center;
+    background: #ffede6;
+}
+
+.deleteGiftCardButton {
+    border: 1px solid orangered;
+    font-family: sans-serif;
+    font-size: 0.8vw;
+    padding: 0.8vw 1.5vw;
+    display: inline-block;
+    width: 15vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 0.5vw;
+    text-align: center;
+    background: #ffede6;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+    width: 20vw;
+    text-align: center;
+    clear: both;
+    font-weight: bold;
+    font-size: 2vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: green;
+}
+
+.options {
+    width: inherit;
+    padding: 1vw;
+    background-color: #2A7680;
+    border: solid lightgrey 1px;
+}
+
+.backToSignUp {
+    padding-bottom: 0.7vw;
+    padding-top: 0.8vw;
+    background-color: #2A7680;
+    width: 20vw;
+    font-size: 0.2vw;
+}
+
+#clickedView {
+    background-color: #5da5af !important;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    color: white;
+}
+
+
+h1 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    font-weight: bold;
+    margin-top: 2px;
+    text-align: center;
+}
+
+a:-webkit-any-link {
+    color: black;
+    /*color: -webkit-link;*/
+    cursor: pointer;
+    text-decoration: unset;
+    text-align: center;
+}
+
+/*terms and condition view*/
+
+#textTC {
+    text-align: justify;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    font-size: 0.8vw;
+}
+
+.headlineUserSettings {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0px;
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+
+h3 {
+    display: block;
+    font-size: 15px;
+    text-align: center;
+    color: black;
+}
+
+/*settings view*/
+.settingsContainer {
+    background-color: #F6F6F6;
+    color: black;
+    font-size: 1.2vw;
+    display: flex;
+    align-items: center;
+    height: 6vw;
+    border-style: solid hidden hidden hidden;
+    border-color: white;
+
+}
+
+/*Change email view*/
+#email {
+    width: 16.4vw;
+    height: 3vw;
+    border-radius: 1px;
+    border: 1px solid lightgray;
+    outline: 0;
+    padding-right: 0.5vw;
+    padding-left: 1vw;
+    margin-left: 0.9vw;
+    margin-right: 0.9vw;
+    margin-top: 5.7vw;
+}
+
+#saveNewEmailButton {
+    width: 18.1vw;
+    height: 3vw;
+    border: solid #FFCAA1;
+    outline: 0;
+    padding-right: 0.5vw;
+    padding-left: 0.5vw;
+    margin-left: 0.9vw;
+    margin-right: 0.9vw;
+    margin-top: 0.5vw;
+    border-radius: 1.4vw;
+    background-color: #FFCAA1;
+    color: black;
+}
+
+.iconEmail {
+    color: lightsalmon;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 9vw;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    padding-left: 5.3vw;
+    padding-top: 6vw;
+}
+
+/*Change password view*/
+.password {
+    width: 17vw;
+    height: 3vw;
+    padding-right: 0.5vw;
+    padding-left: 0.5vw;
+    margin-left: 0.9vw;
+    margin-right: 0.4vw;
+    margin-top: 0.5vw;
+    border-radius: 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-image: initial;
+    outline: 0px;
+}
+
+#saveNewPasswordButton {
+    width: 18.1vw;
+    height: 3vw;
+    border-radius: 1.4vw;
+    margin-left: 0.9vw;
+    margin-right: 0.9vw;
+    margin-top: 0.5vw;
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border: solid #FFCAA1;
+    background-color: #FFCAA1;
+    color: black;
+}
+
+.iconPassword {
+    color: lightsalmon;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    padding-top: 5.3vw;
+    padding-left: 6.3vw;
+    font: 11vw / 1 FontAwesome
+}
+
+.addCardDescription {
+    border: none;
+    color: black;
+    font-family: sans-serif;
+    width: 15vw;
+    padding-left: 0.2vw;
+    padding-right: 0.2vw;
+    padding-top: 1.5vw;
+    font-size: 0.8vw;
+}
+
+.addCardInput {
+    border: none;
+    border-bottom: 0.06vw solid dimgrey;
+    color: black;
+    font-family: sans-serif;
+    width: 15vw;
+    height: 1.8vw;
+    padding-left: 0.2vw;
+    padding-right: 0.2vw;
+    font-size: 1.2vw;
+}
+
+#addCardContainer {
+    padding-left: 2vw;
+    padding-top: 2vw;
+}
+
+.addAndEditGiftCardButton {
+    border-radius: 1.4vw;
+    border: 0.1vw solid #FFCAA1;
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    padding: 0.8vw 1.5vw;
+    text-decoration: none;
+    background-color: #FFCAA1;
+    width: 15.7vw;
+    margin-top: 4vw;
+    text-align: center;
+}
+
+.inShowGiftCardButton {
+    border-radius: 1.4vw;
+    border: 0.1vw solid #FFCAA1;
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    padding: 0.8vw 1.5vw;
+    text-decoration: none;
+    background-color: #FFCAA1;
+    width: 15.7vw;
+    margin-bottom: 0.5vw;
+    margin-left: 0.5vw;
+    text-align: center;
+}
+
+#areYouSure {
+    font-size: 1.3vw;
+    padding-top: 7vw;
+    padding-bottom: 4vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    text-align: center;
+}
+
+.passwordDeletedButton {
+    border-radius: 1.4vw;
+    font-weight: bold;
+    font-size: 0.8vw;
+    padding: 0.8vw 1.5vw;
+    background-color: #FFCAA1;
+    width: 15.7vw;
+    margin-top: 2vw;
+    text-align: center;
+    border: 0.1vw solid #2A7680;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.deleteAccountButton {
+    border-radius: 1.4vw;
+    font-weight: bold;
+    font-size: 0.8vw;
+    padding: 0.8vw 1.5vw;
+    background-color: #FFCAA1;
+    width: 15.7vw;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    text-align: center;
+    border: 0.1vw solid #2A7680;
+    border: 0.1vw solid #2A7680;
+}
+
+.popupInapp{
+font-size: 1vw;
+color: orangered;
+margin-left: 1vw;
+margin-bottom: -0.1vw;
+}
+
+#deleteButtonsPosition {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#dontDelete {
+    border: 0.1vw solid #2A7680;
+}
+
+#yesDelete {
+    border: 0.1vw solid orangered;
+}
+
+.wLogo {
+    height: 3vw;
+    margin-left: -14vw;
+    margin-right: 1.3vw;
+    margin-top: -0.3vw;
+}
+
+.headline {
+    margin-top: -2.5vw;
+}
+
+.newHeadLine {
+    margin-top: -2.5vw;
+}
+
+.newHeadLine2 {
+    margin-top: -2.2vw;
+}
+
+.noGiftCards {
+    margin-top: 13vw;
+    margin-left: 1.2vw;
+    font-size: 1.1vw;
+}
+
+.addCardButtonFromNoCards {
+    margin-top: 4vw;
+    width: 18.1vw;
+    border-radius: 1.4vw;
+    border: solid #FFCAA1;
+    background-color: #FFCAA1;
+    height: 3vw;
+    margin-left: -0.4vw;
+    font-size: 1.7vw;
+}
+
+.f067 {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    color: black;
+}

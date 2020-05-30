@@ -1,0 +1,26 @@
+.phoneCase {
+    position: fixed;
+    left: 35vw;
+    top: 3.4vw;
+    background-color: dimgrey;
+    border-radius: 1.2vw;
+    width: 21.5vw;
+    height: 41.5vw;
+    margin: 0 auto;
+    color: black;
+    border-style: solid;
+}
+
+.phoneContainer {
+    position: fixed;
+    left: 35.8vw;
+    top: 4.1vw;
+    /*background-color: #ffb468;*/
+    width: 20vw;
+    height: 40vw;
+    margin: 0 auto;
+    color: black;
+    font-size: 18px;
+    border-style: solid;
+    font-family: Tahoma;
+}

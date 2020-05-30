@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Terms and Condition</title>
+    <link type="text/css" rel="stylesheet" href="/inapp.css">
+    <link type="text/css" rel="stylesheet" href="/all.css">
+    <link type="text/css" rel="stylesheet" href="/login_signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<span class="phoneCase">
+<span class="phoneContainer">
+
+    <div id="header">
+         <img th:src="wallit_w_logo.png" class="wLogo">
+        <p class="headline">Terms of Service</p>
+    </div>
+
+    <div class="mainContainer" id="showCardContainer">
+
+ <h1 style= "font-size: 1vw; padding-top: 1vw; color: black">WELCOME TO WALLIT!</h1>
+
+<div id="textTC">
+
+<p>
+    These Terms of Service (the “Terms”) set forth the terms and conditions that govern access to, and use of, the
+    websites and Wallit mobile applications made available by Wallit Inc. that enable a user to send or manage
+    gift cards and receive the other services from Wallit as described herein (collectively, the “Services”). These Terms
+    are a legal agreement between you (“you,” or “your”) and Wallit. By clicking to “Accept” these Terms where this option is made
+    available to you and/or by using our Services, you agree to be bound by these Terms. These Terms do not alter in any way the terms or
+    conditions of any other agreement you may have with any other party for products, services or otherwise.
+</p>
+
+ <p>
+     Wallit reserves the right to change, modify, add or remove all or part of these Terms at any time and in our sole
+     discretion. If we make changes to these Terms, we will provide notice of such changes by posting such changes on
+     our websites or mobile applications and updating the “Last Updated” date at the top of these Terms.
+ </p>
+
+<p>
+    We do not charge you for the use of Wallit or the other products and services covered by these Terms. Instead,
+    companies and organizations pay us to show you ads for their products and services.
+    By using our products, you agree that we may serve you advertisements that we believe may be relevant to you and
+    your interests. We use your personal information to help you decide which ads to show you.
+</p>
+
+<p>
+    Our data policy explains how we collect and use your personal information to select any of the ads you see.
+    Please contact Wallit Inc if you would like a copy of our data policy.
+</p>
+               </div>
+            </div>
+
+    <div id="footer" th:if="${#httpServletRequest.remoteUser != null}">
+            <a href="/add-gift-card" class="options"><span><i class="fa fa-plus"></i></span></a>
+            <a href="/my-cards" class="options"><span><i class="fa fa-credit-card"></i></span></a>
+            <a href="/settings" class="options"><span><i class="fa fa-cog"></i></span></a>
+    </div>
+
+   <div class="backToSignUpFooter" th:if="${#httpServletRequest.remoteUser == null}">
+            <span class="backToSignUp"><a href="/sign-up" style="color: white">← Back to Sign Up</a></span>
+    </div>
+            </span>
+            </span>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Change email</title>
+    <link type="text/css" rel="stylesheet" href="inapp.css">
+    <link type="text/css" rel="stylesheet" href="/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<span class="phoneCase">
+<span class="phoneContainer">
+
+    <div id="header">
+         <img th:src="wallit_w_logo.png" class="wLogo">
+        <p class="headline">Change email</p>
+    </div>
+
+
+        <div class="mainContainer" id="showCardContainer">
+            <div class="iconEmail">
+                <i class="fa fa-envelope"></i>
+            </div>
+
+            <form th:action="'/save-changed-email/'" th:object="${appUser}" th:method="post">
+                <input id="email" type="text" th:field="*{email}"/>
+                    <div id="warningMessage" class="popupInapp"></div>
+                <a href="/add-gift-card" >
+                <input type="submit" value="Save New Email" id="saveNewEmailButton">
+                </a>
+             </form>
+        </div>
+
+    </div>
+
+        <div id="footer">
+            <a href="/add-gift-card" class="options"><span><i class="fa fa-plus"></i></span></a>
+            <a href="/my-cards" class="options"><span><i class="fa fa-credit-card"></i></span></a>
+            <a href="/settings" class="options"><span><i class="fa fa-cog"></i></span></a>
+        </div>
+    </span>
+    </span>
+
+</body>
+<script src="script/RequiredWarning.js"></script>
+</html>
